@@ -5,3 +5,8 @@ type MonthTableRowType = Array<number | false>;
 export const isBrowser = () => {
   return typeof window !== "undefined";
 };
+
+export const getCurrentMonthAndYear = () => {
+  const today = new Date();
+  return [getYear(today), getMonth(today)];
+};
