@@ -17,3 +17,19 @@ export const getYearAndMonth = (year: number, month: number) => {
     new Date(year, month - 1),
   );
 };
+
+export const getWeekDays = (locale: string) => {
+  if (locale.startsWith("ar")) {
+    return [
+      "يوم الأحد",
+      "الإثنين",
+      "يوم الثلاثاء",
+      "الأربعاء",
+      "الخميس",
+      "يوم الجمعة",
+      "يوم السبت",
+    ];
+  }
+
+  return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+};

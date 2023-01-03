@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { getYearAndMonth } from "../utils";
+import WeekDay from "./Weekday";
 
 interface IMonthProps {
   month: number;
@@ -8,17 +9,17 @@ interface IMonthProps {
 
 const Month: FC<IMonthProps> = ({ month, year }) => {
   return (
-    <div>
+    <>
       <div className='monthTableLayer'>
-        <div className='header'>
-          <div className='yearMonth'>{getYearAndMonth(year, month)}</div>
-        </div>
-        <div className='table'>
-          {/* <Weekday />
-          <Days days={days} /> */}
-        </div>
+        <header className='header'>
+          <h2 className='yearMonth'>{getYearAndMonth(year, month)}</h2>
+        </header>
+        <table className='table'>
+          <WeekDay />
+          {/* <Days days={days} /> */}
+        </table>
       </div>
-    </div>
+    </>
   );
 };
 
