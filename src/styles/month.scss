@@ -1,0 +1,20 @@
+.monthTableLayer {
+  display: inline-block;
+  padding: 0 32px;
+
+  .header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .yearMonth {
+    font-size: 16px;
+    cursor: default;
+  }
+
+  .table {
+    border-collapse: separate;
+    border-spacing: 0 2px;
+    font-weight: bold;
+  }
+}

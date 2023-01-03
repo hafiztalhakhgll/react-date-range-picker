@@ -10,3 +10,10 @@ export const getCurrentMonthAndYear = () => {
   const today = new Date();
   return [getYear(today), getMonth(today)];
 };
+
+export const getYearAndMonth = (year: number, month: number) => {
+  const language = isBrowser() ? navigator.language : "en-US";
+  return new Intl.DateTimeFormat(language, { year: "numeric", month: "long" }).format(
+    new Date(year, month - 1),
+  );
+};
