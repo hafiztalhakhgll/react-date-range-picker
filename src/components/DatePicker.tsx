@@ -13,8 +13,8 @@ const DatePicker = () => {
   return (
     <div>
       <div className='date-picker-layer'>
-        {monthTableData.map(({ year, month }) => (
-          <Month key={`${year}-${month}`} year={year} month={month} />
+        {monthTableData.map(({ month, year }) => (
+          <Month key={`${month}-${year}`} month={month} year={year} />
         ))}
         <span className='prevbtn-prevbtn'>
           <Prev />

@@ -1,6 +1,5 @@
 import React, { FC, memo } from "react";
-
-import DayRow from "./DayRow";
+import WeekRow from "./WeekRow";
 
 interface IDaysProps {
   days: Array<Array<number | false>>;
@@ -10,7 +9,7 @@ const Days: FC<IDaysProps> = ({ days }) => {
   return (
     <tbody>
       {days.map((dayList, rowIdx) => (
-        <DayRow key={String(rowIdx)} dayList={dayList} />
+        <WeekRow key={String(rowIdx)} dayList={dayList} />
       ))}
     </tbody>
   );
